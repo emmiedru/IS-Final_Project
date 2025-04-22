@@ -1,6 +1,6 @@
 /* 🎀 Base styles for the whole page */
 body {
-  background-image: url('images/gingham.png');
+  background-image: url('gingham.png');
   background-repeat: repeat;
   background-size: 150px;
   font-family: 'Playfair Display', serif;
