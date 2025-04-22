@@ -1,0 +1,96 @@
+<head>
+  <title>Fashion Riddle Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    /* Gingham background and base styling */
+    body {
+      background-image: url('images/gingham.png');
+      background-repeat: repeat;
+      background-size: 150px;
+      font-family: 'Playfair Display', serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Overlay to make text readable */
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.88);
+      padding: 60px 40px;
+      border-radius: 12px;
+      margin: 40px auto;
+      width: 80%;
+      max-width: 700px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #c9184a;
+      margin-bottom: 20px;
+    }
+
+    #riddle {
+      font-size: 1.2rem;
+      margin: 30px 0;
+      padding: 20px;
+      background-color: #fff;
+      border: 2px dashed #c9184a;
+      border-radius: 10px;
+    }
+
+    button {
+      background-color: #c9184a;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: 'Playfair Display', serif;
+    }
+
+    button:hover {
+      background-color: #a0153a;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      color: #c9184a;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Fashion Riddle Generator</h1>
+    <p>Click below to get a random fashion-themed riddle!</p>
+
+    <div id="riddle">Press the button for your first riddle</div>
+
+    <button onclick="generateRiddle()">Give me a riddle!</button>
+
+    <a href="scratch.html">← Back to Scratch Page</a>
+  </div>
+
+  <script>
+    const riddles = [
+      "I wrap your waist, I can cinch real tight. I'm a classic in black, but I come in white. What am I?",
+      "I can be worn on your feet or in your hair, I tie things up with flair. What am I?",
+      "I’m soft, I’m knit, and I keep you warm — in autumn I’m practically your uniform. What am I?",
+      "My laces are long, my soles are flat, I’m worn by skaters and trendsetters — imagine that!",
+      "I’m carried not worn, I hold what you need. I’m the ultimate fashion accessory indeed!"
+    ];
+
+    function generateRiddle() {
+      const randomIndex = Math.floor(Math.random() * riddles.length);
+      document.getElementById('riddle').innerText = riddles[randomIndex];
+    }
+  </script>
+</body>
+</html>
